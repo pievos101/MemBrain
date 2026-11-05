@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Measuring memorization in language models via probabilistic extraction",
+    "authors": [
+      "Jamie Hayes",
+      "Marika Swanberg",
+      "Harsh Chaudhari",
+      "Itay Yona",
+      "Ilia Shumailov",
+      "Milad Nasr",
+      "Christopher A. Choquette-Choo",
+      "Katherine Lee",
+      "A. Feder Cooper"
+    ],
+    "doi": "10.18653/v1/2025.naacl-long.469",
+    "url": "https://aclanthology.org/2025.naacl-long.469/",
+    "status": "Metadata and abstract verified in official ACL Anthology GitHub XML; full paper not read",
+    "abstract_summary": "The authors contrast single-query greedy extraction with repeated-query probabilistic extraction, studying sampling and training repetition effects.",
+    "verification_source": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2025.naacl.xml",
+    "verified_date": "2026-11-05"
+  },
+  {
+    "title": "Understanding Transformer Memorization Recall Through Idioms",
+    "authors": [
+      "Adi Haviv",
+      "Ido Cohen",
+      "Jacob Gidron",
+      "Roei Schuster",
+      "Yoav Goldberg",
+      "Mor Geva"
+    ],
+    "doi": "10.18653/v1/2023.eacl-main.19",
+    "url": "https://aclanthology.org/2023.eacl-main.19/",
+    "status": "Metadata and abstract verified in official ACL Anthology GitHub XML; full paper not read",
+    "abstract_summary": "The authors study memorization recall with idioms and analyze hidden representations and the progression of token predictions through transformer layers.",
+    "verification_source": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2023.eacl.xml",
+    "verified_date": "2026-11-05"
+  },
+  {
+    "title": "Shortening the prefix! Members and non-members exhibit divergent behavior",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0950705126008269",
+    "status": "Reviewer-supplied pointer, not independently verified; publisher request HTTP 403"
+  },
+  {
+    "title": "Learning the Signature of Memorization in Autoregressive Language Models",
+    "url": "https://arxiv.org/abs/2604.03199",
+    "status": "Reviewer-supplied pointer, not independently verified; arXiv request HTTP 403"
+  }
+]

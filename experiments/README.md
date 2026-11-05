@@ -66,6 +66,27 @@ This experimental scorer expects one 80–120 character printable-ASCII sentence
 matching its training domain. It returns both origin-class probabilities and a
 paired reference score.
 
+## Reviewer-directed test: information beyond LOSS
+
+After preparing the recovery and trajectory-classifier manifests above:
+
+```bash
+python experiments/membrain_beyond_loss.py
+python experiments/report_membrain_beyond_loss.py
+```
+
+This uses fresh, disjoint role-specific sentence pools and ten independent LMs
+at three exposure checkpoints. Origin networks remain membership-label-free.
+Separate supervised shadow probes test incremental information over flexible
+LOSS on held-out models, with flattened/shuffled/pooled and loss/recovery controls.
+Loss matching uses only loss and labels, never Membrain scores. Raw LOSS is also
+retained with its conventional ranking. The original analysis plan, execution
+configuration and locally recorded amendments distinguish primary and exploratory
+analyses. `--analysis-only` reuses retained models/scores. Checkpoint and feature
+caches can be large; allow several minutes and use a fresh output after changing
+model/feature definitions. The primary five-epoch test did not establish a gain
+over LOSS in this run; the code does not assume an improvement.
+
 ## Earlier comparisons
 
 - `corrected_benchmark.py`: disjoint synthetic benchmark and embedding affinity.
