@@ -1,5 +1,38 @@
 # Membrain experiments
 
+## Updated Membrain: SPW-inspired continuation trajectories
+
+Membrain retains whole generated suffixes at increasing true prefixes, adds
+aligned and SPW-weighted embedding comparisons, and learns **membership** on
+separate shadow models rather than only learning trajectory origin. Development,
+validation, probability calibration, and fresh target documents are disjoint.
+
+```bash
+python -m unittest discover -s experiments -p test_membrain_prefix.py
+python experiments/run_membrain_prefix.py --stage development
+python experiments/run_membrain_prefix.py --stage test
+python experiments/report_membrain_prefix.py
+```
+
+See [MEMBRAIN_PREFIX_PROTOCOL.md](MEMBRAIN_PREFIX_PROTOCOL.md) for the fixed
+protocol, baseline reruns, equal-supervision ablations, and probability/access
+assumptions. It runs 20 shadow models and 12 fresh benchmark targets. Prepare
+the previous suite's source/tokenizer/background/proposal artifacts first using
+the workflow below. All models remain small CPU Transformers.
+
+Score a new text using one of the compatible local target checkpoints:
+
+```bash
+python experiments/score_membrain_prefix.py \
+  --target-checkpoint results/membrain_prefix/cells/target_ag_news_4101_standard/target.pt \
+  --text-file /path/to/sample.txt
+```
+
+The scorer uses the first 48 BPE tokens, reports all prefix curves, and returns
+a membership score calibrated under the balanced shadow prior. Only load trusted
+local attack checkpoints. Calibration does not establish probabilities for
+arbitrary external models, domains, or membership priors.
+
 ## SPW-MIA comparison on new natural-text benchmarks
 
 The latest comparison independently implements SPW-MIA and the five baselines

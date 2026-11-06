@@ -43,7 +43,7 @@ def components(target_logp,max_logp,initial_similarity,short_logp,similarity_dif
                 spw=weighted_similarity-kl-weighted_max)
 
 
-def spw_batch(oracle,sequences,teacher_log_probs=None,fixed_length=None):
+def spw_batch(oracle,sequences,teacher_log_probs=None,fixed_length=None,return_token_details=False):
     """Batch equivalent of Algorithm 1, processing independent tokens in parallel.
 
     Each shortened prefix is the LAST i tokens of the original prefix. Stop at
@@ -93,6 +93,10 @@ def spw_batch(oracle,sequences,teacher_log_probs=None,fixed_length=None):
         c=components(original_lp[s],maximum_lp[s],sim[s],selected[s],summed[s]/positions[s])
         c.update(mean_shortened_ratio=float(np.mean(stopped[s]/positions[s])),
                  mean_initial_similarity=float(sim[s].mean()),stopping_lengths=stopped[s].tolist())
+        if return_token_details:
+            c.update(target_logp=original_lp[s].tolist(),maximum_logp=maximum_lp[s].tolist(),
+                     shortened_logp=selected[s].tolist(),initial_similarity=sim[s].tolist(),
+                     similarity_difference=(summed[s]/positions[s]).tolist())
         result.append(c)
     return result
 
