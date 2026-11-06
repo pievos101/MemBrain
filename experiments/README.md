@@ -1,5 +1,30 @@
 # Membrain experiments
 
+## SPW-MIA comparison on new natural-text benchmarks
+
+The latest comparison independently implements SPW-MIA and the five baselines
+in Xie et al. (KBS 2026), and adds Membrain. It trains eight small causal
+Transformers on AG News and WikiText-2 with ordinary/repeated exposure. These
+are **new CPU-scale benchmarks**, not the paper's billion-parameter numerical
+reproduction. Neighbor uses a documented local masked-model proposal adaptation.
+
+```bash
+uv pip install --python .venv/bin/python tokenizers==0.21.4
+python -m unittest discover -s experiments -p test_spw_methods.py
+python experiments/run_spw_benchmark.py --download-data
+python experiments/report_spw_benchmark.py
+```
+
+See [SPW_BENCHMARK.md](SPW_BENCHMARK.md) for exact data splits, algorithms,
+access assumptions, inference score definition, and evaluation limitations.
+Outputs include per-example scores, model checkpoints, bootstrap intervals,
+ROC/PR and prefix-recovery plots, and a Markdown report under `results/spw_scale`.
+The primary Membrain membership score is the negative absolute difference
+between true/generated trajectory-origin probabilities. It is not a calibrated
+membership probability; the origin CNN never trains on membership labels.
+
+## Earlier trajectory workflow
+
 The latest workflow tests whether repeated exposure lets a language model recover
 a sentence from shorter prefixes, then learns an embedding-trajectory classifier:
 
