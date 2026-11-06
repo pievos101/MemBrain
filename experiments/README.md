@@ -1,5 +1,57 @@
 # Membrain experiments
 
+## Output-only Membrain: text recovery distributions and unsupervised groups
+
+This experiment uses **completion strings only**. The attacker receives no
+hidden states, model probabilities, tokenizer IDs, gradients, or weights. It
+compares repeated completions with original suffixes at increasing word
+prefixes using normalized edit distances and ROUGE-L. The primary score uses
+a fixed four-word target to control shrinking-suffix effects. Unlabeled GMM
+discovery fitting and held-out grouping test the two-class hypothesis; BIC may
+prefer one component and abstain. A high-recovery component probability is
+not a calibrated membership probability.
+
+```bash
+uv pip install --python .venv/bin/python rapidfuzz==3.9.7
+python -m unittest discover -s experiments -p test_membrain_text.py
+python experiments/run_membrain_text.py
+python experiments/report_membrain_text.py
+```
+
+After that main study, an explicitly exploratory short-completion control uses
+only16 sampled output strings to estimate correct-next-word frequency. It tests
+conditional fit without reading model probabilities and without compounding a
+whole suffix's generation errors:
+
+```bash
+python experiments/run_membrain_word_probe.py
+```
+
+See [MEMBRAIN_WORD_PROBE_CONTROL.md](MEMBRAIN_WORD_PROBE_CONTROL.md). Its data
+were already evaluated in the main study, so it is not independent confirmation.
+
+See [MEMBRAIN_TEXT_PROTOCOL.md](MEMBRAIN_TEXT_PROTOCOL.md) for the frozen query
+budget, complete-sentence selection, strict access separation, and unsupervised
+evaluation. This runs twelve small local targets through an opaque text-service
+adapter, not a commercial API. Privileged LOSS/Min-k/SPW are owner-side
+stronger-access reference comparisons, never attack inputs. Earlier source and
+chunk archives are required for fresh-data exclusion.
+
+The text scorer can also replay transcripts from another provider without
+PyTorch or any model tokenizer:
+
+```bash
+python experiments/score_membrain_transcripts.py \
+  results/membrain_text/cells/ag_news_8101_standard/transcripts.jsonl \
+  --mixture results/membrain_text/cells/ag_news_8101_standard/unsupervised_mixture.json \
+  --output /tmp/membrain_text_scores.jsonl
+```
+
+To use a closed provider, implement `complete(prefixes, samples, temperature,
+max_new_tokens, seed)` returning `{'greedy': str, 'samples': [str, ...]}` for each
+prefix, then pass it to `membrain_text.collect`. That callback sees prefixes
+and generation settings only. No membership labels enter the scorer or mixture.
+
 ## Latest experiment: trajectory shape and hard-token pooling
 
 This controlled study tests centered trajectory shape, step-direction agreement,
