@@ -1,5 +1,27 @@
 # Membrain experiments
 
+## Latest experiment: trajectory shape and hard-token pooling
+
+This controlled study tests centered trajectory shape, step-direction agreement,
+and loss-informed pooling of the hardest suffix tokens. Scoring stays entirely
+membership-label-free. The predefined hybrid has an explicit Min-k20% anchor;
+the report compares against that anchor and geometry-only/loss-only controls.
+No best exploratory score is silently promoted as a validated improvement.
+
+```bash
+python -m unittest discover -s experiments -p 'test_*.py'
+python experiments/run_membrain_shape.py
+python experiments/membrain_tail_control.py
+python experiments/report_membrain_shape.py
+```
+
+See [shape protocol](MEMBRAIN_SHAPE_PROTOCOL.md) and the separately frozen,
+[exploratory fixed-tail control](MEMBRAIN_TAIL_CONTROL.md). The control checks
+that changing the true-prefix partition leaves embeddings of the SAME true
+tail invariant, unlike moving-suffix pooling. Prior source/chunk archives are
+required to exclude all previously used candidate texts. Outputs and full
+embedding trajectories are under `results/membrain_shape`.
+
 ## Simplified Membrain experiment: two embedding curves plus absolute loss
 
 At each increasing true prefix, retain one embedding of the true suffix and
