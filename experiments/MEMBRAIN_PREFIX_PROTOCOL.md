@@ -1,5 +1,9 @@
 # Membrain: SPW-inspired, membership-supervised continuation trajectories
 
+**Historical supervised experiment.** The current Membrain attack is the
+label-free fixed score in [MEMBRAIN_UNSUPERVISED_PROTOCOL.md](MEMBRAIN_UNSUPERVISED_PROTOCOL.md).
+The supervised results here must not be attributed to that unsupervised method.
+
 This extension retains the name **Membrain**. The old origin-CNN gap is retained
 as `Membrain original` in comparisons, not silently replaced in historical runs.
 This protocol was written before evaluating the fresh target benchmark.

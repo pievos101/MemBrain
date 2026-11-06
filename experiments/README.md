@@ -1,8 +1,36 @@
 # Membrain experiments
 
-## Updated Membrain: SPW-inspired continuation trajectories
+## Current Membrain: unsupervised membership scoring
 
-Membrain retains whole generated suffixes at increasing true prefixes, adds
+Membrain now uses a fixed per-text score. **No membership labels, shadow
+classifier, origin classifier, learned normalizer, or probability calibration
+are used by the attack.** It retains whole generated continuations at increasing
+true prefixes, adds SPW-inspired position weights and a within-text alignment
+control, and combines recovery support with Min-k20% using a fixed formula.
+
+```bash
+python -m unittest discover -s experiments -p test_membrain_unsupervised.py
+python experiments/run_membrain_unsupervised.py --download-data
+python experiments/report_membrain_unsupervised.py
+```
+
+See [MEMBRAIN_UNSUPERVISED_PROTOCOL.md](MEMBRAIN_UNSUPERVISED_PROTOCOL.md) for
+the exact score and fresh twelve-target benchmark. The benchmark needs the
+public tokenizer/background/proposal artifacts from the first SPW comparison
+and raw chunk archives from the historical experiments to exclude used texts.
+Membership labels are used to train the target LMs and evaluate attacks, never
+as inputs to or tuning data for the Membrain score. Outputs are ranking scores,
+not membership probabilities. No binary threshold is fitted.
+
+```bash
+python experiments/score_membrain_unsupervised.py \
+  --target-checkpoint results/membrain_unsupervised/cells/ag_news_5101_standard/target.pt \
+  --text-file /path/to/sample.txt
+```
+
+## Historical supervised revision (not current Membrain)
+
+The archived supervised experiment retains whole generated suffixes at increasing true prefixes, adds
 aligned and SPW-weighted embedding comparisons, and learns **membership** on
 separate shadow models rather than only learning trajectory origin. Development,
 validation, probability calibration, and fresh target documents are disjoint.
