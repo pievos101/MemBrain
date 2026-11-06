@@ -1,6 +1,31 @@
 # Membrain experiments
 
-## Current Membrain: unsupervised membership scoring
+## Simplified Membrain experiment: two embedding curves plus absolute loss
+
+At each increasing true prefix, retain one embedding of the true suffix and
+one embedding of the generated suffix. Current Membrain uses the fixed score
+`-A[teacher CE + embedding distance * absolute free-running true-token CE]`.
+No attack classifier, membership labels, fitted weights, Min-k anchor, SPW token
+weighting, or relative rollout-loss gap is used in this simplified primary score.
+The full-dimensional embedding vectors and continuation curves are saved. This
+is a research candidate; a simpler formula is not assumed to improve detection.
+
+```bash
+python -m unittest discover -s experiments -p test_membrain_simple.py
+python experiments/run_membrain_simple.py
+python experiments/report_membrain_simple.py
+python experiments/score_membrain_simple.py \
+  --target-checkpoint results/membrain_simple/cells/ag_news_6101_standard/target.pt \
+  --text-file /path/to/sample.txt
+```
+
+See [MEMBRAIN_SIMPLE_PROTOCOL.md](MEMBRAIN_SIMPLE_PROTOCOL.md) for the fixed
+definition, fresh-data exclusions, target training, and indispensable loss-only
+controls. The origin classes true=0/generated=1 do not become membership labels.
+No score is a calibrated membership probability. Earlier public artifacts and
+chunk archives are needed for target pretraining and exact data exclusion.
+
+## Earlier fixed-score Membrain with a Min-k anchor
 
 Membrain now uses a fixed per-text score. **No membership labels, shadow
 classifier, origin classifier, learned normalizer, or probability calibration
