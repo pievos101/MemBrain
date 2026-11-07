@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-11-07T09:17:37.673663+00:00",
+  "hashes": {
+    "membrain_curve_cluster.py": "9af6f4d2a28162f533322ad5b3225da944d79a5319ca79fd3f839f771a97c2d6",
+    "run_membrain_curve_cluster.py": "d9ea4c7fbed0e2808452e57687341f58cc9554bfa7813b40dbc87994caf6812d",
+    "MEMBRAIN_CURVE_CLUSTER_PROTOCOL.md": "eb4a3a8b0ac63c042ef8629c50dd3b41556746402ce757965f332972d18e8b09"
+  },
+  "exploratory": true,
+  "new_model_queries": 0
+}

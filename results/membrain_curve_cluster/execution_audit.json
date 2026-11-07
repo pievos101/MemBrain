@@ -1,0 +1,12 @@
+{
+  "targets": 16,
+  "source_transcripts_unchanged": true,
+  "features_reconstructed_from_strings": true,
+  "all_mixtures_refitted_exactly": true,
+  "heldout_scores_reproduced_exactly": true,
+  "discovery_heldout_disjoint": true,
+  "frozen_sources_unchanged": true,
+  "new_model_queries": 0,
+  "membership_supervised": false,
+  "unit_tests_passed": 70
+}

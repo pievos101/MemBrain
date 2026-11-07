@@ -1,5 +1,61 @@
 # Membrain experiments
 
+## Full-curve clustering (exploratory)
+
+Keep eight prefix-distance coordinates per sentence rather than compressing
+before fitting. Compare whole-suffix, sampled next-word and joint curves with
+matched scalar mixtures on unlabeled discovery/held-out splits. See the
+[protocol](MEMBRAIN_CURVE_CLUSTER_PROTOCOL.md).
+
+```bash
+python experiments/run_membrain_curve_cluster.py
+python experiments/report_membrain_curve_cluster.py
+```
+
+This reuses saved validation transcripts and makes zero new model queries.
+Mean held-out AUC over 16 targets: whole curve 0.5847 versus matched early
+scalar 0.5992; next-word curve 0.6610 versus scalar 0.6552; joint 0.6014.
+The next-word improvement is concentrated in repeated exposure. Ordinary
+membership remains weak. This is exploratory data reuse, not fresh validation.
+One-component mixtures abstain. Component probabilities are not calibrated
+membership probabilities. All alternatives, including failures, are reported.
+
+## Prospective validation of the fixed next-word detector
+
+Read [validation findings](MEMBRAIN_VALIDATION_FINDINGS.md) for the observed
+results and limitations. The signal is strongest under repeated exposure;
+ordinary training membership is not reliably resolved.
+
+The16-sample word-recovery score is held unchanged and tested on fresh sentence
+pools, new models, two capacities (182,016/458,592 parameters), and independent
+query replicates. This is confirmation of the previous exploratory direction,
+not membership-supervised tuning. Every attack input remains completion text.
+
+```bash
+mkdir -p results/membrain_text_validation/data
+curl --fail --location https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/valid.txt \
+  --output results/membrain_text_validation/data/wikitext2_valid.txt
+python -m unittest discover -s experiments -p test_membrain_text_validation.py
+python experiments/run_membrain_text_validation.py
+python experiments/report_membrain_text_validation.py
+```
+
+The source SHA-256 is checked by the runner. Prior public source/exclusion
+archives are needed to exclude every previous candidate document. See the
+[frozen validation protocol](MEMBRAIN_TEXT_VALIDATION.md). The primary16 sample
+result, its independent repeat, pooled32/nested3 controls, ordinary/repeated
+conditions, and all capacities/pools must all be reported. A successful repeated-
+exposure case alone is not proof of ordinary training membership detection.
+
+Replay all scores and the high-recovery grouping without PyTorch, model weights,
+or a model tokenizer:
+
+```bash
+python experiments/replay_membrain_text_validation.py \
+  results/membrain_text_validation/cells/small_ag_news_9101_standard \
+  --output /tmp/membrain_validation_replay.jsonl
+```
+
 ## Output-only Membrain: text recovery distributions and unsupervised groups
 
 This experiment uses **completion strings only**. The attacker receives no

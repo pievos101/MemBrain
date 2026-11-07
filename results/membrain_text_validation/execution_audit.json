@@ -1,0 +1,18 @@
+{
+  "frozen_score_and_query_settings_unchanged": true,
+  "development_score_unchanged": true,
+  "freeze_precedes_target_training": true,
+  "target_models": 16,
+  "fresh_source_sentences": 1536,
+  "distinct_evaluated_sentences": 1024,
+  "candidate_model_pairs": 4096,
+  "independent_document_pools_per_corpus": 2,
+  "all_scores_replayed_exactly_from_strings": true,
+  "all_mixtures_reproduced_from_unlabeled_discovery_scores": true,
+  "discovery_test_disjoint": true,
+  "all_reference_differences_verified": true,
+  "independent_query_batches_differ": true,
+  "replay_works_with_torch_and_tokenizer_imports_blocked": true,
+  "membership_supervised": false,
+  "unit_tests_passed": 66
+}

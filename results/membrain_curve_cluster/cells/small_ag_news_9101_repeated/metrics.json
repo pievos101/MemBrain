@@ -1,0 +1,513 @@
+{
+  "capacity": "small",
+  "corpus": "ag_news",
+  "seed": 9101,
+  "regime": "repeated",
+  "metrics": {
+    "Whole curve": {
+      "auc": 0.6287878787878788,
+      "tpr_at_1pct_fpr": 0.25757575757575757,
+      "tpr_at_1pct_fpr_interpolated": 0.265,
+      "average_precision": 0.6403882575757576,
+      "auprc_trapezoid": 0.8201941287878788,
+      "auc_ci95": [
+        0.5757575757575758,
+        0.6818181818181818
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": -0.13062072336265884,
+          "ci95": [
+            -0.21065799120234607,
+            -0.05363514173998041
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": -0.20979960899315742,
+          "ci95": [
+            -0.27982649071358745,
+            -0.13586876832844574
+          ]
+        }
+      }
+    },
+    "Next-word curve": {
+      "auc": 0.863514173998045,
+      "tpr_at_1pct_fpr": 0.4090909090909091,
+      "tpr_at_1pct_fpr_interpolated": 0.45606060606060606,
+      "average_precision": 0.882517128547083,
+      "auprc_trapezoid": 0.8873785824675926,
+      "auc_ci95": [
+        0.7988330889540567,
+        0.9240010997067448
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": 0.10410557184750735,
+          "ci95": [
+            0.02295943304007818,
+            0.18438416422287396
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": 0.024926686217008776,
+          "ci95": [
+            -0.0063599706744867975,
+            0.06086265884652975
+          ]
+        }
+      }
+    },
+    "Joint curves": {
+      "auc": 0.6287878787878788,
+      "tpr_at_1pct_fpr": 0.25757575757575757,
+      "tpr_at_1pct_fpr_interpolated": 0.265,
+      "average_precision": 0.6403882575757576,
+      "auprc_trapezoid": 0.8201941287878788,
+      "auc_ci95": [
+        0.5757575757575758,
+        0.6818181818181818
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": -0.13062072336265884,
+          "ci95": [
+            -0.21065799120234607,
+            -0.05363514173998041
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": -0.20979960899315742,
+          "ci95": [
+            -0.27982649071358745,
+            -0.13586876832844574
+          ]
+        }
+      }
+    },
+    "Whole early scalar": {
+      "auc": 0.7594086021505376,
+      "tpr_at_1pct_fpr": 0.3787878787878788,
+      "tpr_at_1pct_fpr_interpolated": 0.4257575757575758,
+      "average_precision": 0.8239087595201523,
+      "auprc_trapezoid": 0.8230399964290431,
+      "auc_ci95": [
+        0.6720185728250244,
+        0.837774926686217
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": -0.07917888563049857,
+          "ci95": [
+            -0.16010508308895413,
+            0.0033143939393939226
+          ]
+        }
+      }
+    },
+    "Next-word early scalar": {
+      "auc": 0.8385874877810362,
+      "tpr_at_1pct_fpr": 0.3181818181818182,
+      "tpr_at_1pct_fpr_interpolated": 0.3275757575757576,
+      "average_precision": 0.8496424268646225,
+      "auprc_trapezoid": 0.854032427640822,
+      "auc_ci95": [
+        0.7617240957966764,
+        0.9022666177908113
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": 0.07917888563049857,
+          "ci95": [
+            -0.0033143939393939356,
+            0.1601050830889541
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "Whole mean scalar": {
+      "auc": 0.8454301075268816,
+      "tpr_at_1pct_fpr": 0.5,
+      "tpr_at_1pct_fpr_interpolated": 0.5563636363636364,
+      "average_precision": 0.8872605672889073,
+      "auprc_trapezoid": 0.8868338287961866,
+      "auc_ci95": [
+        0.773439027370479,
+        0.9103250244379276
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": 0.08602150537634401,
+          "ci95": [
+            0.03934506353861189,
+            0.1383431085043988
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": 0.006842619745845435,
+          "ci95": [
+            -0.06982221407624627,
+            0.08776270772238515
+          ]
+        }
+      }
+    },
+    "Next-word mean scalar": {
+      "auc": 0.8670576735092865,
+      "tpr_at_1pct_fpr": 0.3484848484848485,
+      "tpr_at_1pct_fpr_interpolated": 0.37666666666666665,
+      "average_precision": 0.8801491011869529,
+      "auprc_trapezoid": 0.8848878594396805,
+      "auc_ci95": [
+        0.8010569403714565,
+        0.9267198191593352
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": 0.1076490713587489,
+          "ci95": [
+            0.025898093841642315,
+            0.19259530791788848
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": 0.02847018572825033,
+          "ci95": [
+            0.0036626344086021475,
+            0.05682123655913973
+          ]
+        }
+      }
+    },
+    "Whole curve up-to3": {
+      "auc": 0.6287878787878788,
+      "tpr_at_1pct_fpr": 0.25757575757575757,
+      "tpr_at_1pct_fpr_interpolated": 0.265,
+      "average_precision": 0.6403882575757576,
+      "auprc_trapezoid": 0.8201941287878788,
+      "auc_ci95": [
+        0.5757575757575758,
+        0.6818181818181818
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": -0.13062072336265884,
+          "ci95": [
+            -0.21065799120234607,
+            -0.05363514173998041
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": -0.20979960899315742,
+          "ci95": [
+            -0.27982649071358745,
+            -0.13586876832844574
+          ]
+        }
+      }
+    },
+    "Whole raw recovery": {
+      "auc": 0.7594086021505376,
+      "tpr_at_1pct_fpr": 0.3787878787878788,
+      "tpr_at_1pct_fpr_interpolated": 0.4257575757575758,
+      "average_precision": 0.8239087595201523,
+      "auprc_trapezoid": 0.8230399964290432,
+      "auc_ci95": [
+        0.6720185728250244,
+        0.837774926686217
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": -0.07917888563049857,
+          "ci95": [
+            -0.16010508308895413,
+            0.0033143939393939226
+          ]
+        }
+      }
+    },
+    "Next-word raw recovery": {
+      "auc": 0.8385874877810362,
+      "tpr_at_1pct_fpr": 0.3181818181818182,
+      "tpr_at_1pct_fpr_interpolated": 0.3275757575757576,
+      "average_precision": 0.8496424268646225,
+      "auprc_trapezoid": 0.854032427640822,
+      "auc_ci95": [
+        0.7617240957966764,
+        0.9022666177908113
+      ],
+      "differences": {
+        "Whole early scalar": {
+          "delta": 0.07917888563049857,
+          "ci95": [
+            -0.0033143939393939356,
+            0.1601050830889541
+          ]
+        },
+        "Next-word early scalar": {
+          "delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "groups": {
+    "Whole curve": {
+      "components": 2,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.25757575757575757,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6287878787878788,
+        "predicted_high": 17,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 1.0,
+        "predicted_high": 17,
+        "count": 128
+      }
+    },
+    "Next-word curve": {
+      "components": 2,
+      "membership": {
+        "precision": 0.9655172413793104,
+        "recall": 0.42424242424242425,
+        "false_positive_rate": 0.016129032258064516,
+        "balanced_accuracy": 0.7040566959921799,
+        "predicted_high": 29,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 0.5862068965517241,
+        "recall": 1.0,
+        "false_positive_rate": 0.10810810810810811,
+        "balanced_accuracy": 0.9459459459459459,
+        "predicted_high": 29,
+        "count": 128
+      }
+    },
+    "Joint curves": {
+      "components": 2,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.25757575757575757,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6287878787878788,
+        "predicted_high": 17,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 1.0,
+        "predicted_high": 17,
+        "count": 128
+      }
+    },
+    "Whole early scalar": {
+      "components": 2,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.25757575757575757,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6287878787878788,
+        "predicted_high": 17,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 1.0,
+        "predicted_high": 17,
+        "count": 128
+      }
+    },
+    "Next-word early scalar": {
+      "components": 2,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.2878787878787879,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6439393939393939,
+        "predicted_high": 19,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 0.8947368421052632,
+        "recall": 1.0,
+        "false_positive_rate": 0.018018018018018018,
+        "balanced_accuracy": 0.990990990990991,
+        "predicted_high": 19,
+        "count": 128
+      }
+    },
+    "Whole mean scalar": {
+      "components": 2,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.25757575757575757,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6287878787878788,
+        "predicted_high": 17,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 1.0,
+        "predicted_high": 17,
+        "count": 128
+      }
+    },
+    "Next-word mean scalar": {
+      "components": 2,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.3484848484848485,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6742424242424243,
+        "predicted_high": 23,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 0.7391304347826086,
+        "recall": 1.0,
+        "false_positive_rate": 0.05405405405405406,
+        "balanced_accuracy": 0.972972972972973,
+        "predicted_high": 23,
+        "count": 128
+      }
+    },
+    "Whole curve up-to3": {
+      "components": 2,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.25757575757575757,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6287878787878788,
+        "predicted_high": 17,
+        "count": 128
+      },
+      "high_exposure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 1.0,
+        "predicted_high": 17,
+        "count": 128
+      }
+    }
+  },
+  "high_exposure_metrics": {
+    "Whole curve": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Next-word curve": {
+      "auc": 0.9819819819819819,
+      "tpr_at_1pct_fpr": 0.0,
+      "tpr_at_1pct_fpr_interpolated": 0.2775,
+      "average_precision": 0.8095238095238095,
+      "auprc_trapezoid": 0.9047619047619048
+    },
+    "Joint curves": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Whole early scalar": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Next-word early scalar": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Whole mean scalar": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Next-word mean scalar": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Whole curve up-to3": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Whole raw recovery": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    },
+    "Next-word raw recovery": {
+      "auc": 1.0,
+      "tpr_at_1pct_fpr": 1.0,
+      "tpr_at_1pct_fpr_interpolated": 1.0,
+      "average_precision": 1.0,
+      "auprc_trapezoid": 1.0
+    }
+  },
+  "heldout_members": 66,
+  "heldout_nonmembers": 62,
+  "exploratory_reused_data": true,
+  "membership_supervised": false,
+  "new_model_queries": 0,
+  "transcript_sha256": {
+    "short": "47c27e8aa4a1965881856bd3ada2f083ce9facfa6821b4e9c1dfb15eddf807ec",
+    "long": "2a3d4a6f624f7530c5ce193f1e05d9472882aae6c3940a26a69879f35f968555"
+  }
+}

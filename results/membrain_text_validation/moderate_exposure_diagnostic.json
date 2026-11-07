@@ -1,0 +1,18 @@
+{
+  "exploratory": true,
+  "definition": "Repeated-condition12-presentation members vs nonmembers, excluding96-presentation items from evaluation only",
+  "metrics": {
+    "small": {
+      "Membrain 16": 0.8464152018229166,
+      "Membrain replicate16": 0.8395894368489584,
+      "Membrain pooled32": 0.85968017578125,
+      "Greedy whole-suffix": 0.6653035481770833
+    },
+    "larger": {
+      "Membrain 16": 0.7049357096354166,
+      "Membrain replicate16": 0.6902262369791667,
+      "Membrain pooled32": 0.7132364908854166,
+      "Greedy whole-suffix": 0.5755716959635416
+    }
+  }
+}

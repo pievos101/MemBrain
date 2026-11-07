@@ -1,0 +1,14 @@
+{
+  "frozen_utc": "2026-11-06T15:57:36.753181+00:00",
+  "hashes": {
+    "membrain_word_probe.py": "5a93d6fa954e228ac78761f7d89ac38dcec8ea3cb192ae020ce4889869e78582",
+    "membrain_text.py": "2772058e50e2a5bd6c16a5b5ea718302cedf032de0fa24e4da84becb641d517d",
+    "membrain_text_backend.py": "af0aea559f7769d919c742fbf1175c912b62f2fe1f2a0ac45a46b9ddb12105f4",
+    "membrain_text_validation.py": "072fc06171507835b1ab3d30fcfa773c0cc2f472ffc5b0262e5407417c97472b",
+    "run_membrain_text_validation.py": "b543bea7d62de0eb490dfacb47db250326a758f88d0d821e574995dad1a30534",
+    "MEMBRAIN_TEXT_VALIDATION.md": "7e4b78ae4ff9e74226c3470d20fe5508af5b3738ffb6c52d2d5d4e9c656e375c"
+  },
+  "prospective_internal_validation": true,
+  "development_commit": "47c7358",
+  "membership_supervised": false
+}

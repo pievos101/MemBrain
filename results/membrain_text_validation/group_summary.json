@@ -1,0 +1,172 @@
+{
+  "small/standard": {
+    "Membrain 16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.5273890912347743,
+        "recall": 0.5329994863893168,
+        "balanced_accuracy": 0.5404887567523956,
+        "false_positive_rate": 0.4520219728845255
+      },
+      "high_exposure": null
+    },
+    "Membrain replicate16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.4966840545030559,
+        "recall": 0.5626605033384695,
+        "balanced_accuracy": 0.4999195457318808,
+        "false_positive_rate": 0.5628214118747077
+      },
+      "high_exposure": null
+    },
+    "Membrain pooled32": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.5170956188572381,
+        "recall": 0.5285053929121726,
+        "balanced_accuracy": 0.5114184281063903,
+        "false_positive_rate": 0.5056685366993923
+      },
+      "high_exposure": null
+    }
+  },
+  "small/repeated": {
+    "Membrain 16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.24274524910118128,
+        "balanced_accuracy": 0.6213726245505907,
+        "false_positive_rate": 0.0
+      },
+      "high_exposure": {
+        "precision": 0.9861111111111112,
+        "recall": 1.0,
+        "balanced_accuracy": 0.9988738738738738,
+        "false_positive_rate": 0.0022522522522522522
+      }
+    },
+    "Membrain replicate16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.2578967642526965,
+        "balanced_accuracy": 0.6289483821263483,
+        "false_positive_rate": 0.0
+      },
+      "high_exposure": {
+        "precision": 0.9431818181818181,
+        "recall": 1.0,
+        "balanced_accuracy": 0.9943693693693694,
+        "false_positive_rate": 0.01126126126126126
+      }
+    },
+    "Membrain pooled32": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.2389573703133025,
+        "balanced_accuracy": 0.6194786851566513,
+        "false_positive_rate": 0.0
+      },
+      "high_exposure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "balanced_accuracy": 1.0,
+        "false_positive_rate": 0.0
+      }
+    }
+  },
+  "larger/standard": {
+    "Membrain 16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.5330547924297924,
+        "recall": 0.43425783256291733,
+        "balanced_accuracy": 0.5384531332052548,
+        "false_positive_rate": 0.3573515661524077
+      },
+      "high_exposure": null
+    },
+    "Membrain replicate16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.4706230154139507,
+        "recall": 0.520351823317925,
+        "balanced_accuracy": 0.4852518817384389,
+        "false_positive_rate": 0.5498480598410472
+      },
+      "high_exposure": null
+    },
+    "Membrain pooled32": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.4988114423851733,
+        "recall": 0.5388418079096046,
+        "balanced_accuracy": 0.5196546580454988,
+        "false_positive_rate": 0.49953249181860687
+      },
+      "high_exposure": null
+    }
+  },
+  "larger/repeated": {
+    "Membrain 16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.9868421052631579,
+        "recall": 0.2668207498715973,
+        "balanced_accuracy": 0.6313942459035407,
+        "false_positive_rate": 0.004032258064516129
+      },
+      "high_exposure": {
+        "precision": 0.8849937343358396,
+        "recall": 1.0,
+        "balanced_accuracy": 0.9911084998041519,
+        "false_positive_rate": 0.017783000391696044
+      }
+    },
+    "Membrain replicate16": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 0.8594384057971015,
+        "recall": 0.4083204930662558,
+        "balanced_accuracy": 0.6424783858505659,
+        "false_positive_rate": 0.12336372136512389
+      },
+      "high_exposure": {
+        "precision": 0.6250543478260869,
+        "recall": 1.0,
+        "balanced_accuracy": 0.9159322365844105,
+        "false_positive_rate": 0.168135526831179
+      }
+    },
+    "Membrain pooled32": {
+      "targets": 4,
+      "selected_two": 4,
+      "membership": {
+        "precision": 1.0,
+        "recall": 0.2583461736004109,
+        "balanced_accuracy": 0.6291730868002054,
+        "false_positive_rate": 0.0
+      },
+      "high_exposure": {
+        "precision": 0.9345238095238095,
+        "recall": 1.0,
+        "balanced_accuracy": 0.9944085389737564,
+        "false_positive_rate": 0.01118292205248727
+      }
+    }
+  }
+}

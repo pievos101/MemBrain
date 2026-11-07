@@ -1,0 +1,78 @@
+{
+  "small": {
+    "Membrain 16": {
+      "auc": 1.0,
+      "average_precision": 1.0
+    },
+    "Membrain replicate16": {
+      "auc": 1.0,
+      "average_precision": 1.0
+    },
+    "Membrain pooled32": {
+      "auc": 1.0,
+      "average_precision": 1.0
+    },
+    "Membrain nested3": {
+      "auc": 1.0,
+      "average_precision": 1.0
+    },
+    "Hard-prefix word probe": {
+      "auc": 0.99609375,
+      "average_precision": 0.9931640625
+    },
+    "Greedy next-word": {
+      "auc": 1.0,
+      "average_precision": 1.0
+    },
+    "Greedy whole-suffix": {
+      "auc": 1.0,
+      "average_precision": 1.0
+    },
+    "Greedy fixed-tail": {
+      "auc": 0.9998604910714286,
+      "average_precision": 0.9990808823529411
+    },
+    "Length-only control": {
+      "auc": 0.5007672991071428,
+      "average_precision": 0.13036323039493658
+    }
+  },
+  "larger": {
+    "Membrain 16": {
+      "auc": 0.9998953683035714,
+      "average_precision": 0.9993303571428571
+    },
+    "Membrain replicate16": {
+      "auc": 0.9994419642857142,
+      "average_precision": 0.9973958333333333
+    },
+    "Membrain pooled32": {
+      "auc": 0.9998604910714286,
+      "average_precision": 0.9991319444444444
+    },
+    "Membrain nested3": {
+      "auc": 0.9993373325892858,
+      "average_precision": 0.9959254031393264
+    },
+    "Hard-prefix word probe": {
+      "auc": 0.953125,
+      "average_precision": 0.91796875
+    },
+    "Greedy next-word": {
+      "auc": 0.9985700334821428,
+      "average_precision": 0.9952351419120785
+    },
+    "Greedy whole-suffix": {
+      "auc": 0.9966866629464286,
+      "average_precision": 0.9911652489698735
+    },
+    "Greedy fixed-tail": {
+      "auc": 0.8508823939732143,
+      "average_precision": 0.6938203251902214
+    },
+    "Length-only control": {
+      "auc": 0.5007672991071428,
+      "average_precision": 0.13036323039493658
+    }
+  }
+}
